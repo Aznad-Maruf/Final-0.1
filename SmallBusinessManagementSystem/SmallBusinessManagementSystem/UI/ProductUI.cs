@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 using SmallBusinessManagementSystem.Model;
 using SmallBusinessManagementSystem.Manager;
+using SmallBusinessManagementSystem.UI;
 
 namespace SmallBusinessManagementSystem.Model
 {
