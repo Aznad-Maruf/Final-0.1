@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.salesDataGridView = new System.Windows.Forms.DataGridView();
             this.sIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +54,7 @@
             this.addButton = new System.Windows.Forms.Button();
             this.totalMrpTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.mrpTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -72,7 +74,7 @@
             this.gotoPurchaseLinkLabel = new System.Windows.Forms.LinkLabel();
             this.productDetailsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.productDetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.quantityTextBox = new System.Windows.Forms.TextBox();
+            this.homeButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDetailsBindingSource)).BeginInit();
@@ -313,6 +315,14 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "Total MRP (Tk)";
             // 
+            // quantityTextBox
+            // 
+            this.quantityTextBox.Location = new System.Drawing.Point(203, 155);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.Size = new System.Drawing.Size(245, 29);
+            this.quantityTextBox.TabIndex = 1;
+            this.quantityTextBox.TextChanged += new System.EventHandler(this.quantityTextBox_TextChanged);
+            // 
             // mrpTextBox
             // 
             this.mrpTextBox.Location = new System.Drawing.Point(203, 190);
@@ -486,19 +496,22 @@
             // 
             this.productDetailsBindingSource1.DataSource = typeof(SmallBusinessManagementSystem.Model.ProductDetails);
             // 
-            // quantityTextBox
+            // homeButton
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(203, 155);
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(245, 29);
-            this.quantityTextBox.TabIndex = 1;
-            this.quantityTextBox.TextChanged += new System.EventHandler(this.quantityTextBox_TextChanged);
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(518, 12);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 8;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // SalesUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1413, 600);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.gotoPurchaseLinkLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.productGroupBox);
@@ -567,5 +580,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn deleteDataGridViewTextBoxColumn;
         private System.Windows.Forms.LinkLabel gotoPurchaseLinkLabel;
         private System.Windows.Forms.TextBox quantityTextBox;
+        private System.Windows.Forms.Button homeButton;
     }
 }

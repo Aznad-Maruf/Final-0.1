@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryUI));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.categoryCodeTextBox = new System.Windows.Forms.TextBox();
@@ -37,11 +38,12 @@
             this.categorySaveButton = new System.Windows.Forms.Button();
             this.categorySearchButton = new System.Windows.Forms.Button();
             this.showCategoryDataGridView = new System.Windows.Forms.DataGridView();
-            this.categoryModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.showCategoryDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryModelBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -122,10 +124,6 @@
             this.showCategoryDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showCategoryDataGridView_CellDoubleClick);
             this.showCategoryDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.showCategoryDataGridView_RowPostPaint);
             // 
-            // categoryModelBindingSource
-            // 
-            this.categoryModelBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.CategoryModel);
-            // 
             // Sl
             // 
             this.Sl.HeaderText = "Sl";
@@ -148,12 +146,27 @@
             this.Action.HeaderText = "Action";
             this.Action.Name = "Action";
             // 
+            // categoryModelBindingSource
+            // 
+            this.categoryModelBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.CategoryModel);
+            // 
+            // homeButton
+            // 
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(385, 12);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 8;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
             // CategoryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.showCategoryDataGridView);
             this.Controls.Add(this.categorySearchButton);
             this.Controls.Add(this.categorySaveButton);
@@ -187,5 +200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
         private System.Windows.Forms.BindingSource categoryModelBindingSource;
+        private System.Windows.Forms.Button homeButton;
     }
 }

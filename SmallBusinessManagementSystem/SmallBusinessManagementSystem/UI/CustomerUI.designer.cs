@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUI));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,14 +47,15 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
             this.Sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loyalityPointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerModelBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -209,11 +211,6 @@
             this.Sl.HeaderText = "Sl";
             this.Sl.Name = "Sl";
             // 
-            // Action
-            // 
-            this.Action.HeaderText = "Action";
-            this.Action.Name = "Action";
-            // 
             // codeDataGridViewTextBoxColumn
             // 
             this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
@@ -250,15 +247,31 @@
             this.loyalityPointDataGridViewTextBoxColumn.HeaderText = "LoyalityPoint";
             this.loyalityPointDataGridViewTextBoxColumn.Name = "loyalityPointDataGridViewTextBoxColumn";
             // 
+            // Action
+            // 
+            this.Action.HeaderText = "Action";
+            this.Action.Name = "Action";
+            // 
             // customerModelBindingSource
             // 
             this.customerModelBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.CustomerModel);
+            // 
+            // homeButton
+            // 
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(33, 14);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 16;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 554);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.showDataGridView);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.saveButton);
@@ -312,5 +325,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn loyalityPointDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
         private System.Windows.Forms.BindingSource customerModelBindingSource;
+        private System.Windows.Forms.Button homeButton;
     }
 }

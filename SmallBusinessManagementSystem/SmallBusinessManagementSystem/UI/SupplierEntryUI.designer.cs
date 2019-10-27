@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierEntryUI));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,19 +44,14 @@
             this.supplierContactPersonTextBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.suppliersDataGridView = new System.Windows.Forms.DataGridView();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.supplierEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactPersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierEntryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierEntryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesModelBindingSource)).BeginInit();
@@ -173,12 +169,6 @@
             this.suppliersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.suppliersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Count,
-            this.codeDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.contactDataGridViewTextBoxColumn,
-            this.contactPersonDataGridViewTextBoxColumn,
             this.Action});
             this.suppliersDataGridView.DataSource = this.supplierEntryBindingSource;
             this.suppliersDataGridView.Location = new System.Drawing.Point(30, 325);
@@ -188,6 +178,20 @@
             this.suppliersDataGridView.TabIndex = 3;
             this.suppliersDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.suppliersDataGridView_RowPostPaint);
             this.suppliersDataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.suppliersDataGridView_MouseClick);
+            // 
+            // Count
+            // 
+            this.Count.HeaderText = "SI";
+            this.Count.Name = "Count";
+            // 
+            // Action
+            // 
+            this.Action.HeaderText = "Action";
+            this.Action.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
+            this.Action.Name = "Action";
+            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Action.Text = "Edit";
+            this.Action.UseColumnTextForLinkValue = true;
             // 
             // label7
             // 
@@ -222,69 +226,22 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "*";
             // 
-            // Count
+            // homeButton
             // 
-            this.Count.HeaderText = "SI";
-            this.Count.Name = "Count";
-            // 
-            // Action
-            // 
-            this.Action.HeaderText = "Action";
-            this.Action.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.Action.Name = "Action";
-            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Action.Text = "Edit";
-            this.Action.UseColumnTextForLinkValue = true;
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // contactDataGridViewTextBoxColumn
-            // 
-            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
-            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
-            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
-            // 
-            // contactPersonDataGridViewTextBoxColumn
-            // 
-            this.contactPersonDataGridViewTextBoxColumn.DataPropertyName = "ContactPerson";
-            this.contactPersonDataGridViewTextBoxColumn.HeaderText = "ContactPerson";
-            this.contactPersonDataGridViewTextBoxColumn.Name = "contactPersonDataGridViewTextBoxColumn";
-            // 
-            // supplierEntryBindingSource
-            // 
-            //this.supplierEntryBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.SupplierEntry);
-            // 
-            // salesModelBindingSource
-            // 
-            //this.salesModelBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.SalesModel);
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(435, 12);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 8;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // SupplierEntryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 487);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -342,5 +299,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactPersonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewLinkColumn Action;
+        private System.Windows.Forms.Button homeButton;
     }
 }

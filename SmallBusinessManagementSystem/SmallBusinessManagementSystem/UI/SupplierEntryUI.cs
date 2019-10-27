@@ -175,5 +175,12 @@ namespace SmallBusinessManagementSystem.UI
         {
             suppliersDataGridView.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            HomeUI newForm = new HomeUI();
+            newForm.Show();
+            this.Hide();
+        }
     }
 }

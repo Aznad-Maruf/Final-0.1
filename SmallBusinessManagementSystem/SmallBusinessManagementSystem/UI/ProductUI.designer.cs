@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductUI));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
-            this.productModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +52,8 @@
             this.reorderLevelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.categoryModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productModelBindingSource)).BeginInit();
@@ -195,10 +197,6 @@
             this.showDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.showDataGridView_CellDoubleClick);
             this.showDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.showDataGridView_RowPostPaint);
             // 
-            // productModelBindingSource
-            // 
-            this.productModelBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.ProductModel);
-            // 
             // Sl
             // 
             this.Sl.HeaderText = "Sl";
@@ -239,11 +237,26 @@
             this.Action.HeaderText = "Action";
             this.Action.Name = "Action";
             // 
+            // productModelBindingSource
+            // 
+            this.productModelBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.ProductModel);
+            // 
+            // homeButton
+            // 
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(23, 25);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 14;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
             // ProductUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 475);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.showDataGridView);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.saveButton);
@@ -294,5 +307,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn reorderLevelDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
+        private System.Windows.Forms.Button homeButton;
     }
 }

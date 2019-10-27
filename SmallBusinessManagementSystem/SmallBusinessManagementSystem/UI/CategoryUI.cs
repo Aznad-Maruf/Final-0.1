@@ -134,5 +134,12 @@ namespace SmallBusinessManagementSystem.UI
                 categorySaveButton.Text = "Update";
             }
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            HomeUI newForm = new HomeUI();
+            newForm.Show();
+            this.Hide();
+        }
     }
 }

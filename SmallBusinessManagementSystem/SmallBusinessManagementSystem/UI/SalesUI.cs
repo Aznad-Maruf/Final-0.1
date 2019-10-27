@@ -337,6 +337,13 @@ namespace SmallBusinessManagementSystem.UI
             }
         }
 
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            HomeUI newForm = new HomeUI();
+            newForm.Show();
+            this.Hide();
+        }
+
         private void quantityComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             //if (quantityComboBox.SelectedIndex != 0) _isQuantitySelected = true;

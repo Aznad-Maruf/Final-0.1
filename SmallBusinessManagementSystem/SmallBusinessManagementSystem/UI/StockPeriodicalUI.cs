@@ -58,6 +58,11 @@ namespace SmallBusinessManagementSystem.UI
 
         }
 
-        
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            HomeUI newForm = new HomeUI();
+            newForm.Show();
+            this.Hide();
+        }
     }
 }

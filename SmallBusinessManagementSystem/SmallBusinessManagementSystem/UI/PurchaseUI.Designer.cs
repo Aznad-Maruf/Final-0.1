@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseUI));
             this.supplierGroupBox = new System.Windows.Forms.GroupBox();
             this.invoiceNoTextBox = new System.Windows.Forms.TextBox();
             this.DateDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -66,15 +67,12 @@
             this.productComboBox = new System.Windows.Forms.ComboBox();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
             this.purchaseDataGridView = new System.Windows.Forms.DataGridView();
-            this.submitButton = new System.Windows.Forms.Button();
+            this.sIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ManufactureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpireDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.sIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mRPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,10 +80,14 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.purchaseModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.submitButton = new System.Windows.Forms.Button();
             this.purchaseDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchaseModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gotoSalesLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.homeButton = new System.Windows.Forms.Button();
             this.supplierGroupBox.SuspendLayout();
             this.productGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseDataGridView)).BeginInit();
@@ -476,16 +478,17 @@
             this.purchaseDataGridView.TabIndex = 11;
             this.purchaseDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.purchaseDataGridView_CellContentClick);
             // 
-            // submitButton
+            // sIDataGridViewTextBoxColumn
             // 
-            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(911, 820);
-            this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(95, 42);
-            this.submitButton.TabIndex = 22;
-            this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
-            this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            this.sIDataGridViewTextBoxColumn.DataPropertyName = "SI";
+            this.sIDataGridViewTextBoxColumn.HeaderText = "SI";
+            this.sIDataGridViewTextBoxColumn.Name = "sIDataGridViewTextBoxColumn";
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Products(Code)";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
             // 
             // ManufactureDate
             // 
@@ -511,30 +514,6 @@
             this.TotalPrice.DataPropertyName = "TotalPrice";
             this.TotalPrice.HeaderText = "Total Price(Tk)";
             this.TotalPrice.Name = "TotalPrice";
-            // 
-            // Edit
-            // 
-            this.Edit.DataPropertyName = "Edit";
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            // 
-            // Delete
-            // 
-            this.Delete.DataPropertyName = "Delete";
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            // 
-            // sIDataGridViewTextBoxColumn
-            // 
-            this.sIDataGridViewTextBoxColumn.DataPropertyName = "SI";
-            this.sIDataGridViewTextBoxColumn.HeaderText = "SI";
-            this.sIDataGridViewTextBoxColumn.Name = "sIDataGridViewTextBoxColumn";
-            // 
-            // productDataGridViewTextBoxColumn
-            // 
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Products(Code)";
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
             // 
             // mRPDataGridViewTextBoxColumn
             // 
@@ -583,9 +562,32 @@
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.Visible = false;
             // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "Edit";
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            // 
+            // Delete
+            // 
+            this.Delete.DataPropertyName = "Delete";
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            // 
             // purchaseModelBindingSource1
             // 
             this.purchaseModelBindingSource1.DataSource = typeof(SmallBusinessManagementSystem.Model.PurchaseModel);
+            // 
+            // submitButton
+            // 
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.Location = new System.Drawing.Point(911, 820);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(95, 42);
+            this.submitButton.TabIndex = 22;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // purchaseDetailsBindingSource
             // 
@@ -607,11 +609,22 @@
             this.gotoSalesLinkLabel.Text = "Go To Sales";
             this.gotoSalesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gotoSalesLinkLabel_LinkClicked);
             // 
+            // homeButton
+            // 
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(1083, 35);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 24;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
             // PurchaseUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 874);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.gotoSalesLinkLabel);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.purchaseDataGridView);
@@ -692,5 +705,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.LinkLabel gotoSalesLinkLabel;
+        private System.Windows.Forms.Button homeButton;
     }
 }

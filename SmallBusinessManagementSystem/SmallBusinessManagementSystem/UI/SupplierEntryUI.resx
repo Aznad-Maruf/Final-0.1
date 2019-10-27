@@ -129,4 +129,19 @@
   <metadata name="salesModelBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="homeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAelJREFUSEvF
+        VEtOAkEQRVfGRAmgMDNAQoAFn/BJiDdg5xk4gG6MNyDBpZ7AO8CGhTsTFsYTEN3oyp0JC3dOIr43VOPY
+        tPMxJlbyUtXVVe9VD00nolo+n083Go1zolAopCX9N1YqlZxOp/PQ7XaX8B+My+WyI9vxLJvN7haLxSPC
+        tu19kNsg9sg1UMSWtuiG6W44JUng55xWYpXjCTyISLyToPFRJwsQ4DqeCJoe2RgT0T8XJgo6wTP8k56X
+        OPwkclteDc3Ldrt9lclktlOp1BZjUw38zyIBt4Xkl1K2NuZMtcDm5zLc8/V0JnJl3NPrJf46iSI3FBkn
+        102J6L3wKxEsZtqGF0chV8ZagwDjGQVcJjTcSm9kY4/GQbjcmBqUx9IX2dA7NvBME5ZlJRFcI3kH0FP5
+        VwLS63GR03GcpGyvDE9yT5QDBfAg7uVyOQt+R1LrE+CR7Elq0/B6hgq0Wq0z7L+zDqRvzWbzmHklwCG9
+        QpNRAIWBn4ikUqNwL3nvE4UKhJ1A9j2QEH7OPAWY+38BNgETSW2Y7PuhBCZcBwrgZhxiChdY4Mc7rVar
+        Az9qtdqAUyqQEP4FP/wJ4gViF0MeCJ3Z8Lcf+Zr9RN9y+hoxn5eR0ARbpVLp1+v1IXAREUOcsC/tPksk
+        PgHaJYtuo7zObQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

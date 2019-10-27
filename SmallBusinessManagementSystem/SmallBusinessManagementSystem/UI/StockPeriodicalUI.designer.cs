@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockPeriodicalUI));
             this.Product = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,8 +42,6 @@
             this.lostCheckBox = new System.Windows.Forms.CheckBox();
             this.searchStockButton = new System.Windows.Forms.Button();
             this.stockSearchDataGridView = new System.Windows.Forms.DataGridView();
-            this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,9 @@
             this.outDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.closingBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockPeriodicalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stockSearchDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockPeriodicalBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -180,32 +182,6 @@
             this.stockSearchDataGridView.TabIndex = 4;
             this.stockSearchDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.stockSearchDataGridView_RowPostPaint);
             // 
-            // startDateTimePicker
-            // 
-            this.startDateTimePicker.Checked = false;
-            this.startDateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startDateTimePicker.Location = new System.Drawing.Point(480, 58);
-            this.startDateTimePicker.MaxDate = new System.DateTime(2020, 4, 1, 0, 0, 0, 0);
-            this.startDateTimePicker.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
-            this.startDateTimePicker.Name = "startDateTimePicker";
-            this.startDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.startDateTimePicker.TabIndex = 5;
-            this.startDateTimePicker.Value = new System.DateTime(2019, 10, 25, 0, 0, 0, 0);
-            // 
-            // endDateTimePicker
-            // 
-            this.endDateTimePicker.Checked = false;
-            this.endDateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endDateTimePicker.Location = new System.Drawing.Point(480, 107);
-            this.endDateTimePicker.MaxDate = new System.DateTime(2020, 12, 25, 0, 0, 0, 0);
-            this.endDateTimePicker.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
-            this.endDateTimePicker.Name = "endDateTimePicker";
-            this.endDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.endDateTimePicker.TabIndex = 5;
-            this.endDateTimePicker.Value = new System.DateTime(2019, 10, 25, 0, 0, 0, 0);
-            // 
             // SI
             // 
             this.SI.HeaderText = "SI";
@@ -269,11 +245,48 @@
             // 
             this.stockPeriodicalBindingSource.DataSource = typeof(SmallBusinessManagementSystem.Model.StockPeriodical);
             // 
+            // startDateTimePicker
+            // 
+            this.startDateTimePicker.Checked = false;
+            this.startDateTimePicker.CustomFormat = "yyyy-MM-dd";
+            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDateTimePicker.Location = new System.Drawing.Point(480, 58);
+            this.startDateTimePicker.MaxDate = new System.DateTime(2020, 4, 1, 0, 0, 0, 0);
+            this.startDateTimePicker.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.startDateTimePicker.Name = "startDateTimePicker";
+            this.startDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.startDateTimePicker.TabIndex = 5;
+            this.startDateTimePicker.Value = new System.DateTime(2019, 10, 25, 0, 0, 0, 0);
+            // 
+            // endDateTimePicker
+            // 
+            this.endDateTimePicker.Checked = false;
+            this.endDateTimePicker.CustomFormat = "yyyy-MM-dd";
+            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDateTimePicker.Location = new System.Drawing.Point(480, 107);
+            this.endDateTimePicker.MaxDate = new System.DateTime(2020, 12, 25, 0, 0, 0, 0);
+            this.endDateTimePicker.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.endDateTimePicker.Name = "endDateTimePicker";
+            this.endDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.endDateTimePicker.TabIndex = 5;
+            this.endDateTimePicker.Value = new System.DateTime(2019, 10, 25, 0, 0, 0, 0);
+            // 
+            // homeButton
+            // 
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.Location = new System.Drawing.Point(508, 12);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(43, 35);
+            this.homeButton.TabIndex = 8;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
             // StockPeriodicalUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 450);
+            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.endDateTimePicker);
             this.Controls.Add(this.startDateTimePicker);
             this.Controls.Add(this.stockSearchDataGridView);
@@ -290,7 +303,6 @@
             this.Controls.Add(this.Product);
             this.Name = "StockPeriodicalUI";
             this.Text = "StockPeriodicalUI";
-           
             ((System.ComponentModel.ISupportInitialize)(this.stockSearchDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockPeriodicalBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -325,5 +337,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn outDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn closingBalanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource stockPeriodicalBindingSource;
+        private System.Windows.Forms.Button homeButton;
     }
 }
